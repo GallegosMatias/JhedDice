@@ -9,7 +9,7 @@ class Juego {
   constructor(){
     this.inicializar();
     this.generarSecuencia();
-    setTimeout(this.siguienteNivel.bind(this), 1000);
+    setTimeout(this.siguienteNivel.bind(this), 2000);
 
   }
 
@@ -26,12 +26,16 @@ class Juego {
     }
   }
 
+  // toggleBtnEmpezar() {
+  //   if (btnEmpezar.classList.contains('hide')) {
+  //     btnEmpezar.classList.remove('hide');
+  //   } else {
+  //     btnEmpezar.classList.add('hide');
+  //   }
+  // }
+
   toggleBtnEmpezar() {
-    if (btnEmpezar.classList.contains('hide')) {
-      btnEmpezar.classList.remove('hide');
-    } else {
-      btnEmpezar.classList.add('hide');
-    }
+    $('.btn-start').fadeOut(1500);
   }
 
   generarSecuencia() {
