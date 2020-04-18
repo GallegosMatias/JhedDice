@@ -26,17 +26,19 @@ class Juego {
     }
   }
 
-  // toggleBtnEmpezar() {
-  //   if (btnEmpezar.classList.contains('hide')) {
-  //     btnEmpezar.classList.remove('hide');
-  //   } else {
-  //     btnEmpezar.classList.add('hide');
-  //   }
-  // }
-
   toggleBtnEmpezar() {
-    $('.btn-start').fadeOut(1500);
+    if (btnEmpezar.classList.contains('hide')) {
+      btnEmpezar.classList.remove('hide');
+      $('.btn-start').fadeIn(300);
+    } else {
+      btnEmpezar.classList.add('hide');
+      $('.btn-start').fadeOut(1500);
+    }
   }
+
+  // toggleBtnEmpezar() {
+  //   $('.btn-start').fadeOut(1500);
+  // }
 
   generarSecuencia() {
     this.secuencia = new Array(ULTIMO_NIVEL).fill(0).map(n => Math.floor(Math.random() * 4));
