@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><Jhed></Jhed> Dice</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina+2|Lexend+Giga&display=swap" rel="stylesheet">
+    <title>Jhed Dice</title>
     <style>
       *{
         transition: all 300ms;
@@ -16,6 +17,7 @@
         display: flex;
         align-items: center;
         height: 100vh;
+        background: linear-gradient(90deg, #1c3643,#273b47 25%,#1e5372);
       }
 
       .gameboard {
@@ -26,6 +28,9 @@
         margin: 0 auto;
         max-height: 60vh;
         max-width: 60vh;
+        -webkit-box-shadow: 10px 10px 30px -9px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 30px -9px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 30px -9px rgba(0,0,0,0.75);
       }
 
       .color {
@@ -77,12 +82,20 @@
       .btn-start {
         width: 400px;
         height: 100px;
-        background: #ecf0f1;
-        color: #2c3e50;
-        font-size: 2.5rem;
+        background: linear-gradient(90deg, #0F2027, #203A43, #2c5364);
+        color: white;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-family: 'Lexend Giga', sans-serif;
         position: absolute;
         top: calc(50% - 50px);
         left: calc(50% - 200px);
+        top: 85%;
+        border-radius: 45px;
+        border: 2px solid white;
+        -webkit-box-shadow: 10px 10px 30px -9px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 30px -9px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 30px -9px rgba(0,0,0,0.75);
       }
 
       .hide {
@@ -91,12 +104,13 @@
     </style>
   </head>
   <body>
+    <div class="logo"></div>
     <div class="gameboard">
       <div id="celeste" class="color celeste left" data-color="celeste"></div>
       <div id="violeta" class="color violeta right" data-color="violeta"></div>
       <div id="naranja" class="color naranja left" data-color="naranja"></div>
       <div id="verde" class="color verde right" data-color="verde"></div>
-      <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+      <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Iniciar Juego</button>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" charset="utf-8"></script>
     <script src="index.js" charset="utf-8"></script>
